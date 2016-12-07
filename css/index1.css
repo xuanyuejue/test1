@@ -1,0 +1,24 @@
+
+
+  .multiselect__option--highlight {
+    background: #941616 !important;
+  }
+
+  .multiselect__tags {
+    border-radius: 0 !important;
+    border-radius: 0 !important;
+    border: 1px solid #c6c6c6 !important;
+  }
+
+  .multiselect__tag {
+    background: #941616 !important;
+  }
+
+  .multiselect__tag-icon:after {
+    color: #fff !important;
+  }
+
+  .multiselect__tag-icon:focus,
+  .multiselect__tag-icon:hover {
+    border-color: #941616 !important;
+  }

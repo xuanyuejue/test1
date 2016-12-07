@@ -1,0 +1,703 @@
+
+  /*@import '~bulma/sass/utilities/variables';*/
+  /*@import '~bulma/sass/utilities/mixins';*/
+
+  .input, .textarea, .select select {
+    font-size: 14px;
+    border-radius: 0px;
+    color: #666;
+    border-color: #c6c6c6;
+  }
+
+  .input:focus, .select select:focus {
+    border-color: #c6c6c6;
+  }
+
+  .select select {
+    padding-right: 28px;
+  }
+
+  .select:after {
+    border-color: #666;
+  }
+
+  .button.is-danger {
+    background-color: #93140e;
+    cursor: pointer;
+  }
+
+  .button.is-danger.is-outlined {
+    width: 64px;
+    border-color: #93140e;
+    background-color: #FFF;
+    color: #93140e;
+    cursor: pointer;
+  }
+
+  .button.is-danger:hover, .button.is-danger.is-outlined:hover {
+    border-color: #93140e;
+    background-color: #93140e;
+    color: #FFF;
+  }
+
+  .button.gg-button {
+    width: 100px;
+    height: 30px;
+    float: left;
+    border-color: #941616;
+    color: #941616;
+  }
+
+  .button.gg-button:hover, .button.save-button:focus {
+    background-color: #941616;
+    color: #FFF;
+  }
+
+  .button.delete-modal, .button.adgj-button {
+    float: right;
+  }
+
+  .modal-card, .modal-content {
+    width: 1100px;
+    /*overflow-x: hidden;*/
+  }
+
+  .modal-card-head {
+    text-align: center;
+    height: 60px;
+    background: url('../img/bg.png') left center repeat-x;
+    color: #FFF;
+    border-radius: 0px;
+  }
+
+  .modal-card-head2 {
+    height: 50px;
+  }
+
+  .modal-card-title {
+    color: #FFF;
+    font-size: 20px;
+  }
+
+  .modal-card-body {
+    max-height: 70vh;
+    background-color: #f2f2f2;
+    overflow: hidden;
+    /*box-sizing: border-box;*/
+    /*padding: 10px;*/
+  }
+
+  .modal-card-foot {
+    border-radius: 0px;
+    border: none;
+  }
+
+  .select.select-self {
+    width: auto;
+    margin-right: 16px;
+  }
+
+  .st {
+    width: 6px;
+    height: 6px;
+    background: url('../img/star.png');
+    margin-right: 4px;
+    display: inline-block;
+    position: relative;
+    top: -3px;
+  }
+
+  .city {
+    height: 32px;
+    line-height: 32px;
+    margin-right: 16px;
+  }
+
+  .button-pic {
+    margin-top: 5px;
+    margin-left: 25px;
+    color: #ea9d08;
+  }
+
+  .input-self {
+    width: 45%;
+  }
+
+  .help.is-danger {
+    margin-left: 10px;
+    line-height: 27px;
+  }
+
+  .xian {
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0px 12px;
+    font-size: 13px;
+  }
+
+  .textarea-self {
+    min-width: auto;
+    width: 45%;
+  }
+
+  .alert-self {
+    width: 400px;
+    height: 250px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -125px;
+    background: #f2f2f2;
+  }
+
+  .header-self {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 15px;
+    background: #d81a21;
+    color: #FFF;
+    font-size: 16px;
+  }
+
+  .h2-self {
+    text-align: center;
+    margin-top: 65px;
+    font-size: 16px;
+  }
+
+  .button-area {
+    position: absolute;
+    left: 0px;
+    bottom: 20px;
+  }
+
+  .upload-button {
+    background-color: #d81a21;
+    width: 42px;
+    height: 42px;
+    position: relative;
+    /*background: url('http://snd.iihwx.com/fangjie_assets/desktop/img/add.png');*/
+    cursor: pointer;
+    cursor: pointer;
+    overflow: hidden;
+    border: none;
+    margin-left: 136px;
+  }
+
+  .pic-row {
+    margin-top: 25px;
+  }
+
+  .pic-row:after {
+    clear: both;
+    height: 0;
+    display: block;
+    content: "";
+  }
+
+  .pic-border {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #EEE;
+    float: left;
+  }
+
+  .button.is-primary.del-picture {
+    float: left;
+    margin-left: 30px;
+    border: 1px solid #d81a21;
+    color: #d81a21;
+  }
+
+  .button.is-primary.del-picture:hover, .button.is-primary.del-picture:focus {
+    background-color: #d81a21;
+    border: 1px solid #d81a21;
+  }
+
+  .is-ancestor .select {
+    margin-right: 8px;
+  }
+
+  .is-ancestor .input {
+    margin-right: 12px;
+  }
+
+  .topfill .input, .topfill .select {
+    margin-right: 20px;
+  }
+
+  .is-ancestor .checkbox {
+    line-height: 32px;
+    margin-left: 18px;
+    font-size: 14px;
+  }
+
+  .self-link {
+    color: #ff3860;
+  }
+
+  .is-ancestor2 .is-danger {
+    margin-right: 8px;
+  }
+
+  .is-ancestor2 span {
+    margin-left: 25px;
+    position: relative;
+    top: 5px;
+  }
+
+  .self-left {
+    width: 70%;
+    float: left;
+    list-style: none;
+  }
+
+  .self-left li {
+    width: 100%;
+    margin-bottom: 5px;
+    line-height: 25px;
+  }
+
+  .input-110 {
+    width: 110px;
+  }
+
+  .input-130 {
+    width: 130px;
+  }
+
+  .input-50 {
+    width: 50px;
+  }
+
+  .input-60 {
+    width: 60px;
+  }
+
+  .input-140 {
+    width: 140px;
+  }
+
+  .input-160 {
+    width: 160px;
+  }
+
+  .gjspan {
+    margin-top: 8px;
+    margin-right: 35px;
+  }
+
+  #addFy .modal-card, #look .modal-card {
+    width: 1100px;
+  }
+
+  .tabs-content {
+    background-color: #FFF;
+    padding: 30px 0px;
+    border: 1px solid #d9d9d9;
+    max-height: 60vh;
+    overflow: auto;
+  }
+
+  #my-tile {
+    width: 99%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .gj-con {
+    background-color: #FFF;
+    padding: 20px;
+    border: 1px solid #c6c6c6;
+  }
+
+  .form-row {
+    margin-bottom: 20px;
+  }
+
+  .form-row:after {
+    clear: both;
+    display: block;
+    height: 0;
+    content: "";
+  }
+
+  .formlabel {
+    padding-right: 5px;
+    width: 100px;
+    height: 32px;
+    line-height: 32px;
+    float: left;
+    text-align: right;
+    font-size: 14px;
+    color: #666;
+    margin-left: 8px;
+  }
+
+  .formlabel2 {
+    margin-left: 40px;
+  }
+
+  .control-self {
+    float: left;
+  }
+
+  .vaild-row {
+    color: #F00;
+    position: relative;
+    top: 8px;
+    font-size: 13px;
+    padding-left: 3px;
+  }
+
+  .formspan {
+    line-height: 32px;
+    margin-right: 5px;
+    font-size: 12px;
+    color: #666;
+  }
+
+  .is-ancestor .select2 {
+    margin-right: 5px;
+  }
+
+  .is-ancestor .input-80 {
+    width: 100px;
+    margin-right: 5px;
+  }
+
+  .dashed {
+    border-bottom: 1px dashed #b3b3b3;
+    height: 1px;
+    margin-bottom: 20px;
+  }
+
+  .btn-selfarea {
+    width: 240px;
+    margin: 10px auto 0px;
+    height: 32px;
+  }
+
+  .select.is-fullwidth {
+    width: 100px;
+    border-radius: 0px;
+  }
+
+  #tabs-content .is-8 {
+    border-right: 1px solid #BBB;
+  }
+
+  .left-tile {
+    width: 66%;
+    border-right: 1px solid #d9d9d9;
+    float: left;
+  }
+
+  .right-tile {
+    width: 33%;
+    float: left;
+  }
+
+  .right-tile .formlabel {
+    width: 110px;
+    padding-left: 10px;
+  }
+
+  .right-tile .input-80 {
+    width: 225px;
+  }
+
+  .button.choose-btn {
+    border-color: #666;
+    color: #666;
+    font-size: 12px;
+    margin-right: 18px;
+    border-radius: 0px;
+  }
+
+  .button.choose-active {
+    border-color: #efa016;
+    color: #efa016;
+  }
+
+  .upload-file {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    opacity: 0;
+    width: 300px;
+    height: 80px;
+    cursor: pointer;
+    background-color: #ff3860;
+  }
+
+  .img-border {
+    margin-left: 30px;
+  }
+
+  .img-row {
+    width: 200px;
+    margin: 30px auto 0px;
+  }
+
+  .img-row:after {
+    clear: both;
+    height: 0;
+    display: block;
+    content: "";
+  }
+
+  .img-k {
+    width: 140px;
+    height: 100px;
+    float: left;
+    position: relative;
+  }
+
+  .img-k img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+  }
+
+  .button.is-danger.del-btn {
+    width: auto;
+    float: right;
+    margin-top: 76px;
+    font-size: 12px;
+  }
+
+  .img-progress {
+    width: 140px;
+    height: 100px;
+    line-height: 100px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFF;
+  }
+
+  .detail-body {
+    font-size: 14px;
+    color: #666;
+  }
+
+  .detail-top {
+    margin-bottom: 12px;
+  }
+
+  .detail-top:after {
+    clear: both;
+    display: block;
+    content: "";
+    height: 0;
+  }
+
+  .detail-tt {
+    float: left;
+  }
+
+  .db {
+    width: 230px;
+    float: right;
+    line-height: 28px;
+  }
+
+  .db em {
+    font-size: 18px;
+    font-style: normal;
+  }
+
+  .h2span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .h4span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .sta {
+    width: 80px;
+    text-align: right;
+    display: inline-block;
+  }
+
+  .detail-row:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .detail-row .column {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .right-tile .detail-row {
+    margin-bottom: 10px;
+  }
+
+  .tsAlert .btn-selfarea {
+    width: 180px;
+    margin-top: 0px;
+  }
+
+  .tsAlert .button.gg-button {
+    width: 80px;
+  }
+
+  .ts-title {
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 0px;
+    margin-top: 20px;
+  }
+
+  .select.select3 {
+    width: 48.7%;
+  }
+
+  .select.select4 {
+    width: 60px;
+  }
+
+  .select.select5 {
+    width: 130px;
+  }
+
+  .select.select6 {
+    width: 84px;
+    margin-right: 0px;
+  }
+
+  .is-btn {
+    color: #93140e;
+    border: none;
+    font-weight: bold;
+    border: 1px solid #FFF;
+    border-radius: 3px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    padding: 0px 16px;
+    margin-right: 8px;
+  }
+
+  .is-btn:hover {
+    border-color: #93140e;
+    background-color: #93140e;
+    color: #FFF;
+  }
+
+  .control-bd {
+    margin-bottom: 10px;
+  }
+
+  .fa-self {
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 2px;
+  }
+
+  .my-tile .input {
+    margin-right: 5px;
+  }
+
+  .form-rowpad {
+    padding-left: 16px;
+  }
+
+  .sex {
+    font-size: 12px;
+    margin-left: 10px;
+    position: relative;
+    top: 5px;
+  }
+
+  .btn-selfarea2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .button.is-danger.is-outlined.gg-button2 {
+    background-color: #FFF;
+    display: inline-block;
+    width: 100px;
+    line-height: 31px;
+    margin: 0px 15px;
+  }
+
+  .button.is-danger.is-outlined.gg-button2:hover {
+    background-color: #93140e;
+    color: #FFF;
+  }
+
+  .input-200 {
+    width: 250px;
+  }
+
+  .select-width1 {
+    width: 125px !important;
+  }
+
+  .select-width {
+    width: 250px !important;
+  }
+
+  .label-left {
+    margin-left: 23px;
+  }
+
+  .select-width2 {
+    width: 205px !important;
+  }
+
+  .select-width-multi {
+    width: 595px !important;
+  }
+
+  .modal-change {
+    width: 1100px;
+  }
+
+  .formlabel3 {
+    margin-left: 10px;
+  }
+
+  .input-180 {
+    width: 180px;
+  }
+
+  .detail-row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .detail-bottom {
+    width: 67%;
+  }
+
+  #btn-width {
+    width: 390px;
+  }
+
+  #xq-gj {
+    float: left;
+    margin-left: 20px;
+  }
+
+  #xq-ex {
+    float: left;
+    margin-left: 20px;
+  }
+

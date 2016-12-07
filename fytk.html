@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/bulma.css" />
+		<!--<link rel="stylesheet" href="css/index1.css" />-->
+		<link rel="stylesheet" href="css/index.css" />
+		<style>
+			.formlabel {
+				float: none;
+			}
+			
+			.input {
+				width: 50%;
+			}
+			
+			.tit {
+				font-size: 1.2rem;
+				font-weight: 700;
+				padding: 20px;
+				padding-left: 15px;
+			}
+			
+			.tabs-content {
+				padding-top: 10px;
+				overflow-x: hidden;
+				padding: 0 15px;
+			}
+			
+			.area {
+				padding: 10px 0;
+				padding-bottom: 20px;
+				border-bottom: 1px dashed #c6c6c6;
+			}
+			
+			.zhan {
+				opacity: 0;
+			}
+			
+			.kuan1 {
+				width: 73%;
+			}
+			
+			.kuan {
+				width: 76%;
+			}
+			
+			.modaltips {
+				width: 500px;
+			}
+			
+			.tipscon {
+				text-align: center;
+				font-weight: 600;
+				font-size: 1.2rem;
+				border: none;
+				background-color: #f5f5f5;
+				padding: 30px 0 0 0;
+			}
+			
+			.tpsfoot {
+				margin: 10px auto 0px;
+				height: 32px;
+			}
+			
+			#tabs {
+				padding-left: 0px;
+				border: none;
+				height: 30px;
+				width: 100%;
+				margin-bottom: 0px
+			}
+			
+			#tabs a {
+				width: 100px;
+				height: 30px;
+				font-size: 14px;
+			}
+			
+			.tabs.is-boxed li.is-active a {
+				color: #333;
+				background-color: #fff;
+				border-color: #dbdbdb;
+				border-bottom-color: transparent !important;
+			}
+			
+			.left-area {
+				width: 66%;
+				border-right: 1px solid #d9d9d9;
+				float: left;
+			}
+			
+			.right-area {
+				padding-left: 20px;
+				float: left;
+			}
+			
+			#dis {
+				color: #a03336;
+				cursor: pointer;
+				font-weight: bold;
+				margin-left: 40px;
+			}
+			
+			.right-area li {
+				margin-top: 10px;
+			}
+			
+			.jbxx {
+				display: none;
+			}
+			
+			.tabs-active {
+				display: block;
+			}
+			
+			.gj {
+				display: none;
+			}
+			
+			.detail-row:not(:last-child) {}
+			
+			.column {
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+			
+			.table-self2 th {
+				background-color: #CCC;
+			}
+			
+			.tabs-content {
+				background-color: #f5f5f5;
+				padding: 10px 0px;
+				border: none;
+				max-height: 60vh;
+				overflow-y: auto;
+				border-top: none;
+			}
+			
+			.btn-selfarea0 {
+				width: auto;
+				margin: 0px auto 10px;
+			}
+			
+			.modal-card-foot .button:not(:last-child) {
+				margin-right: 20px;
+			}
+			
+			#tabs a {
+				width: 100px;
+				height: 30px;
+				font-size: 14px;
+			}
+			
+			.aico {
+				margin-left: 90px;
+				color: red;
+				font-size: 13px;
+				margin-top: 10px;
+			}
+			
+			.tabs.is-boxed a {
+				border: 1px solid #dbdbdb;
+				margin-right: 12px;
+				background-color: #FFF;
+				color: #a43227;
+				border-radius: 6px 6px 0 0;
+			}
+			
+			.textarea {
+				display: inline-block;
+				width: 80%;
+				min-width: 60%;
+			}
+			
+			.tx {
+				min-height: 40px;
+			}
+			
+			#fyxrgj .detail-row:last-child {margin-bottom: 20px;}
+			
+			#fyxrgj .detail-row span:last-child {
+				margin-left: 10px;
+			}
+			
+			#fyxrgj .tabs-content {
+				background-color: #F5F5F5;
+				border: none;
+			}
+			
+			#fyxrgj .select select,
+			#fyxrgj .input {
+				width: 130px;
+			}
+			
+			#fyxx .tabs-content {
+				padding-top: 20px;
+				background-color: #F5F5F5;
+				border: none;
+			}
+			
+			.table th,
+			.table td {
+				text-align: center;
+			}
+			
+			.notips {
+				margin-top: 20px;
+				background-color: #fff;
+				border: 1px solid #C6C6C6;
+				display: none;
+				text-align: center;
+				margin: 0px auto;
+				height: 80%;margin-bottom: 60px;
+			}
+			
+			.notips img {
+				margin: 87px auto;
+			}
+			
+			.fyxx-a {
+				display: none;
+			}
+			
+			.fyxx-active {
+				display: block;
+			}
+			
+			#fygjrwxq .tabs-content {
+				background-color: #F5F5F5;
+				border: none;
+			}
+			
+			#fygjrwxq .detail-row span:last-child {
+				margin-left: 10px;
+			}
+			
+			#fygjrwxq1 .tabs-content {
+				background-color: #F5F5F5;
+				border: none;
+			}
+			
+			.modal-card-body {
+				padding-right: 0;
+			}
+			
+			#fyxx .modal-card-body {
+				padding-right: 20px;
+				padding-bottom: 0;
+			}
+			
+			#fyxx .modal-card-foot {
+				padding-top: 10px;
+			}
+			
+			#fygjrwxq1 .detail-row span:last-child,
+			#fygjxq .detail-row span:last-child,
+			#fygjxq1 .detail-row span:last-child,
+			#fygjxq2 .detail-row span:last-child,
+			#fydkxq .detail-row span:last-child,
+			#fydkxq1 .detail-row span:last-child,
+			#fydkxq2 .detail-row span:last-child {
+				margin-left: 10px;
+			}
+			
+			#fygjxq .detail-row:not(:last-child),
+			#fygjxq1 .detail-row:not(:last-child),
+			#fygjxq2 .detail-row:not(:last-child),
+			#fydkxq .detail-row:not(:last-child),
+			#fydkxq1 .detail-row:not(:last-child),
+			#fydkxq2 .detail-row:not(:last-child) {}
+			
+			div.textarea {
+				height: auto;
+				min-height: 190px;
+				max-height: 376px;
+				overflow: auto;
+			}
+			
+			div.textarea p {
+				padding-bottom: 10px;
+			}
+			
+			textarea.textarea:focus {
+				border-color: #93140E;
+			}
+			
+			#fydkxq div.textarea,
+			#fydkxq1 div.textarea,
+			#fydkxq2 div.textarea {
+				min-height: 120px;
+				max-height: 376px;
+				overflow: auto;
+			}
+			
+			.detail-row span label:last-child {
+				margin-left: 40px;
+			}
+			/*分页*/
+			
+			.page-self {
+				float: right;
+				height: 34px;
+				display: inline-block;
+				padding-left: 0;
+				margin: 20px 0;
+				border-radius: 4px;
+				list-style: none;
+			}
+			
+			.page-self>li {
+				display: inline;
+			}
+			
+			.page-self>li>a,
+			.page-self>li>span {
+				position: relative;
+				float: left;
+				padding: 6px 12px;
+				cursor: pointer;
+				margin-left: -1px;
+				line-height: 1.42857143;
+				color: #333;
+				text-decoration: none;
+				background-color: #fff;
+				border: 1px solid #ddd;
+			}
+			
+			.page-self>.active>a,
+			.page-self>li>a:hover {
+				background: #f2f2f2;
+			}
+			/*switch 开关*/
+			
+			.mui-switch {
+				width: 43px;
+				height: 22px;
+				position: relative;
+				border: 1px solid #dfdfdf;
+				background-color: #fdfdfd;
+				box-shadow: #dfdfdf 0 0 0 0 inset;
+				border-radius: 20px;
+				border-top-left-radius: 20px;
+				border-top-right-radius: 20px;
+				border-bottom-left-radius: 20px;
+				border-bottom-right-radius: 20px;
+				background-clip: content-box;
+				display: inline-block;
+				-webkit-appearance: none;
+				user-select: none;
+				outline: none;
+			}
+			
+			.mui-switch:before {
+				content: '';
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				top: 0px;
+				left: 0;
+				border-radius: 20px;
+				border-top-left-radius: 20px;
+				border-top-right-radius: 20px;
+				border-bottom-left-radius: 20px;
+				border-bottom-right-radius: 20px;
+				background-color: #fff;
+				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+			}
+			
+			.mui-switch:checked {
+				border-color: #93140e;
+				box-shadow: #93140e 0 0 0 16px inset;
+				background-color: #93140e;
+			}
+			
+			.mui-switch:checked:before {
+				left: 21px;
+			}
+			
+			.mui-switch.mui-switch-animbg {
+				transition: background-color ease 0.4s;
+			}
+			
+			.mui-switch.mui-switch-animbg:before {
+				transition: left 0.3s;
+			}
+			
+			.mui-switch.mui-switch-animbg:checked {
+				box-shadow: #dfdfdf 0 0 0 0 inset;
+				background-color: #93140e;
+				transition: border-color 0.4s, background-color ease 0.4s;
+			}
+			
+			.mui-switch.mui-switch-animbg:checked:before {
+				transition: left 0.3s;
+			}
+			
+			.mui-switch.mui-switch-anim {
+				transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s;
+			}
+			
+			.mui-switch.mui-switch-anim:before {
+				transition: left 0.3s;
+			}
+			
+			.mui-switch.mui-switch-anim:checked {
+				box-shadow: #93140e 0 0 0 16px inset;
+				background-color: #93140e;
+				transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s;
+			}
+			
+			.mui-switch.mui-switch-anim:checked:before {
+				transition: left 0.3s;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--<a class="button is-danger wl-btn is-outlined modal-button" data-target="#fyxq">房源详情</a>-->
+		<a class="button is-danger wl-btn is-outlined modal-button" data-target="#fyxrgj">写入跟进</a>
+		<a class="button is-danger wl-btn is-outlined modal-button" data-target="#fyxx">客源信息</a>
+		<a class="button is-danger wl-btn is-outlined modal-button" data-target="#fygjrwxq">修改任务</a>
+		<a class="button is-danger wl-btn is-outlined modal-button" data-target="#fygjrwxq1">任务详情</a>
+		<a class="button is-danger wl-btn is-outlined modal-button" data-target="#fygjxq">点评跟进</a>
+		<a class="button is-danger wl-btn is-outlined modal-button" data-target="#fygjxq1">修改跟进</a>
+		<a class="button is-danger wl-btn is-outlined modal-button" data-target="#fygjxq2">跟进详情</a>
+		<a class="button is-danger wl-btn is-outlined modal-button" data-target="#fydkxq">带看修改</a>
+		<a class="button is-danger wl-btn is-outlined modal-button" data-target="#fydkxq1">带看详情</a>
+		<a class="button is-danger wl-btn is-outlined modal-button" data-target="#fydkxq2">点评带看</a>
+		<!--弹框-->
+
+		<!--详情-->
+		<!--<div class="modal" id="fyxq">
+			<div class="modal-background"></div>
+			<div class="modal-card">
+				<header class="modal-card-head">
+					<p class="modal-card-title">房源详情</p>
+				</header>
+				<section class="modal-card-body">
+					<div id="tabs" class="tabs is-boxed">
+						<ul id="tabs-ul">
+							<li class="is-active">
+								<a>基本信息</a>
+							</li>
+							<li class="">
+								<a>房源跟进</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="tabs-content" id="tabs-content" style="height:476px;">
+						<div class="jbxx tabs-active">
+							<div class="left-area" style="width: 72%;">
+								<div class="area">
+									<div class="columns detail-row">
+										<div class="column">交易类型：
+											<span></span>
+										</div>
+										<div class="column">意向：
+											<span>急迫</span>
+										</div>
+										<div class="column">房源编号：
+											<span>HL000615</span>
+										</div>
+									</div>
+									<div class="columns detail-row">
+										<div class="column">用途：
+											<span>住宅, 商住, 商铺, 写字楼</span>
+										</div>
+										<div class="column">状态：
+											<span>有效</span>
+										</div>
+										<div class="column">委托日期：
+											<span>2016-11-18 15:55:20</span>
+										</div>
+									</div>
+									<div class="columns detail-row">
+										<div class="column">来源：
+											<span></span>
+										</div>
+										<div class="column">期限：
+											<span>1月内</span>
+										</div>
+										<div class="column">委托方式：
+											<span></span>
+										</div>
+									</div>
+									<div class="columns detail-row">
+										<div class="column">朝向：
+											<span>其他, 朝南, 南北通透</span>
+										</div>
+										<div class="column">类别：
+											<span>其他</span>
+										</div>
+										<div class="column">
+											<span></span>
+										</div>
+
+									</div>
+									<div class="columns detail-row">
+										<div class="column">配套：
+											<span></span>
+										</div>
+										<div class="column">装修：
+											<span></span>
+										</div>
+										<div class="column">
+											<span></span>
+										</div>
+									</div>
+								</div>
+								<div class="" style="margin-top: 26px;">
+									<div class="columns detail-row">
+										<div class="column">意向城区：
+											<span></span>
+										</div>
+										<div class="column">意向价格：
+											<span>0 - 0万</span>
+										</div>
+										<div class="column">
+											<span></span>
+										</div>
+									</div>
+									<div class="columns detail-row">
+										<div class="column">意向片区：
+											<span></span>
+										</div>
+										<div class="column">意向房型：
+											<span></span>
+										</div>
+										<div class="column">
+											<span></span>
+										</div>
+									</div>
+									<div class="columns detail-row">
+										<div class="column">意向楼盘：
+											<span></span>
+										</div>
+										<div class="column">意向面积：
+											<span>0 - 0</span>
+										</div>
+										<div class="column">
+											<span></span>
+										</div>
+									</div>
+									<div class="columns detail-row">
+										<div class="column">意向位置：
+											<span></span>
+										</div>
+										<div class="column">意向楼层： -
+											<span></span>
+										</div>
+										<div class="column">
+											<span></span>
+										</div>
+
+									</div>
+									<div class="columns detail-row">
+										<div class="column">房屋类型：
+											<span></span>
+										</div>
+										<div class="column">付款要求：
+											<span></span>
+										</div>
+										<div class="column">
+											<span></span>
+										</div>
+									</div>
+									<div class="columns detail-row">
+										<div class="column">付佣要求：
+											<span></span>
+										</div>
+										<div class="column">
+											<span></span>
+										</div>
+										<div class="column">
+											<span></span>
+										</div>
+									</div>
+									<div class="columns detail-row">
+										<div class="column">备注：
+											<span>无</span>
+										</div>
+										<div class="column">
+											<span></span>
+										</div>
+										<div class="column">
+											<span></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="right-area">
+								<div class="area">
+									<ul>
+										<li>客户姓名:aaa <span id="dis">显示</span> </li>
+										<li>公私:1 </li>
+										<li>客户等级:A(优质)</li>
+										<li>联系方式一:13000000000</li>
+										<li>联系方式二:</li>
+										<li>联系方式三:</li>
+										<li>联系方式四:</li>
+										<li>联系方式五:</li>
+									</ul>
+								</div>
+								<div>
+									<ul>
+										<li>首次录入：翰林缘店 武明剑</li>
+										<li>最后跟进： 2016-11-18 17:07:58</li>
+										<li>最后修改： 2016-11-18 15:53:58</li>
+										<li>首次录入： 2016-11-15 16:04:49</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="gj">
+							<table class="table is-bordered is-striped  is-narrow table-self2">
+								<thead>
+									<tr>
+										<th>跟进时间</th>
+										<th>跟进方式</th>
+										<th>跟进人员</th>
+										<th>跟进内容</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+				<footer class="modal-card-foot">
+					<div class="btn-selfarea btn-selfarea0">
+						<a class="button is-outlined gg-button modal-button" data-target="#">修改</a>
+						<a class="button is-outlined gg-button modal-button" data-target="#">添加跟进</a>
+						<a class="button is-outlined gg-button modal-button" data-target="#">添加跟进任务</a>
+						<a class="button delete-modal gg-button modal-button" data-target="#">关闭</a>
+					</div>
+				</footer>
+			</div>
+		</div>-->
+
+		<!--写跟进 -->
+		<div class="modal" id="fyxrgj">
+			<div class="modal-background"></div>
+			<div class="modal-card">
+				<header class="modal-card-head">
+					<p class="modal-card-title">写入跟进</p>
+				</header>
+				<section class="modal-card-body">
+					<div class="tabs-content" id="tabs-content" style="height:476px;">
+						<div class="columns ">
+							<div class="column">
+								<div class="detail-row"><i class="st zhan"></i>房源编号：<span>545548</span></div>
+								<div class="detail-row"><i class="st zhan"></i>房源地址：<span>轩辕客户</span></div>
+								<div class="detail-row"><i class="st zhan"></i>跟进员工：<span>银贤测试/轩辕</span></div>
+								<div class="detail-row"><i class="st "></i>跟进方式：<span class="select" style="margin-left: 10px;">
+									<select>
+										<option selected>去电</option>
+										<option>来电</option>
+										<option>看房</option>
+										<option>勘察</option>
+										<option>来访</option>
+										<option>拜访</option>
+										<option>派单</option>
+										<option>短信</option>
+										<option>邮件</option>
+										<option>信函</option>
+										<option>申请</option>
+										<option>修改</option>
+										<option>保留</option>
+										<option>其他</option>
+									</select>
+								</span>
+									<p class="aico">请选择</p>
+								</div>
+								<div class="detail-row"><i class="st "></i>跟进日期：<span style="margin-left: 10px;"><input type="date" class="input"></input> </span>
+									<p class="aico">请选择</p>
+								</div>
+								<div style="opacity: 01;">
+									<div class="detail-row"><i class="st "></i>带看结果：<span class="select" style="margin-left: 10px;">
+									<select>
+										<option>不感兴趣</option>
+										<option>略有兴趣</option>
+										<option selected>有兴趣</option>
+										<option>非常喜欢</option>
+										<option>考虑中</option>
+										<option>不考虑</option>
+										<option>没有看</option>
+									</select>
+								</span>
+										<p class="aico">请选择</p>
+									</div>
+									<div class="detail-row"><span class="zhan">占占</span><i class="st "></i>客户：<span style="margin-left: 10px;"><input type="text"class="input" disabled/><span class="zhan">占占</span>
+										<a class="button is-danger is-outlined">选择</a>
+										</span>
+										<p class="aico">请选择</p>
+									</div>
+								</div>
+								<div class="detail-row"><i class="st zhan"></i><label><input id="btn"  class="mui-switch mui-switch-animbg" type="checkbox" title="写入提醒开关" ><span style="color: #93140E;font-size: 13px;position: relative;top: -5px;">写入提醒</span></label></div>
+								<div id="btn-con">
+									<div class="detail-row">
+										<span><i class="st zhan"></i>提醒方式:</span>
+										<span>
+									<label><input type="radio"name="txcon"value="0" class="radio"checked/>仅自己可见 </label>
+									<label><input type="radio"name="txcon"value="1" class="radio"/>部门内公开 </label>
+									</span>
+									</div>
+									<div class="detail-row"><i class="st "></i>提醒日期：<span style="margin-left: 10px;"><input type="date" class="input"></input> </span>
+										<p class="aico">请选择</p>
+									</div>
+									<div class="detail-row"><i class="st zhan"></i>提醒内容：<span><textarea class="textarea tx"placeholder="请不少于6个字"></textarea></span></div>
+								</div>
+							</div>
+							<div class="column">
+								<div class="detail-row">
+									<span><i class="st "></i>跟进任务：</span>
+									<span><textarea class="textarea"placeholder="请不少于6个字"></textarea></span>
+									<p class="aico">请填写</p>
+								</div>
+								<div class="detail-row">
+									<span><i class="st zhan"></i>跟进状态：</span>
+									<span>
+									<label><input type="radio"name="gjzt"value="0" class="radio"checked/>有效跟进 </label>
+									<label><input type="radio"name="gjzt"value="1" class="radio"/>无效跟进 </label>
+									</span>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</section>
+				<footer class="modal-card-foot">
+					<div class="btn-selfarea btn-selfarea0">
+						<a class="button is-outlined gg-button modal-button" data-target="#">确定</a>
+						<a class="button delete-modal gg-button modal-button" data-target="#">取消</a>
+					</div>
+				</footer>
+			</div>
+		</div>
+
+		<!--客源信息 -->
+		<div class="modal" id="fyxx">
+			<div class="modal-background"></div>
+			<div class="modal-card" style="width: 650px;">
+				<header class="modal-card-head">
+					<p class="modal-card-title">客源信息</p>
+				</header>
+				<section class="modal-card-body">
+
+					<div>
+						<input type="text" class="input" />
+						<a class="button is-danger is-outlined" style="margin-left: 20px;">查询</a>
+					</div>
+					<div class="tabs-content" id="tabs-content" >
+						<div class="notips "style="height:340px;"><img src="img/bg1.png" /></div>
+						<div class="fyxx-a fyxx-active">
+						<div style="height:340px; overflow-y: auto;">
+							<table class="table is-bordered is-striped  is-narrow table-self2">
+								<thead>
+									<tr>
+										<th>客户</th>
+										<th>联系电话</th>
+										<th>交易</th>
+										<th>期限</th>
+										<th>意向</th>
+										<th>客源归属</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+									</tr><tr>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+									</tr><tr>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+									</tr><tr>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+									</tr><tr>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+									</tr><tr>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+									</tr><tr>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+									</tr><tr>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+									</tr><tr>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+									</tr><tr>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+									</tr><tr>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+									</tr><tr>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+									</tr><tr>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+									</tr><tr>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+										<td>1</td>
+									</tr>
+								</tbody>
+							</table>
+
+						</div>
+						<div class="page-border">
+						<ul class="page-self">
+							<li>
+								<a>
+									<<</a>
+							</li>
+							<li>
+								<a>
+									<</a>
+							</li>
+							<li class="active">
+								<a>1</a>
+							</li>
+							<li>
+								<a>2</a>
+							</li>
+							<li>
+								<a>3</a>
+							</li>
+							<li>
+								<a>4</a>
+							</li>
+							<li>
+								<a>5</a>
+							</li>
+							<li>
+								<a>></a>
+							</li>
+							<li>
+								<a>>></a>
+							</li>
+						</ul>
+					</div>
+						</div>
+					</div>
+					
+				</section>
+				<footer class="modal-card-foot">
+					<div class="btn-selfarea btn-selfarea0">
+						<a class="button is-outlined gg-button modal-button" data-target="#">确定</a>
+						<a class="button delete-modal gg-button modal-button" data-target="#">取消</a>
+					</div>
+				</footer>
+			</div>
+		</div>
+
+		<!--跟进任务-->
+		<!--修改-->
+		<div class="modal" id="fygjrwxq">
+			<div class="modal-background"></div>
+			<div class="modal-card">
+				<header class="modal-card-head">
+					<p class="modal-card-title">修改跟进任务</p>
+				</header>
+				<section class="modal-card-body">
+					<div class="tabs-content" id="tabs-content" style="height:476px;">
+						<div class="columns ">
+							<div class="column">
+								<div class="detail-row"><span class="zhan">占</span>房源编号：<span>545548</span></div>
+								<div class="detail-row"><span class="zhan">占</span>房源地址：<span>轩辕客户</span></div>
+								<div class="detail-row"><span class="zhan">占</span>交易方式：<span>求租</span></div>
+								<div class="detail-row">任务分配人：<span>银贤测试/轩辕</span></div>
+								<div class="detail-row"><span class="zhan">占</span>分配日期：<span>2016-11-08 16:25</span></div>
+								<div class="detail-row">任务执行人：<span class="select" style="margin-left: 10px;">
+									<select>
+										<option>一组</option>
+										<option>二组</option>
+										
+									</select>
+								</span>
+									<span class="select">
+									<select>
+										<option>gas</option>
+										<option>风格和</option>
+										
+									</select>
+								</span></div>
+								<div class="detail-row"><span class="zhan">占</span>截至日期：<span><input type="date" class="input"></input> </span></div>
+								<div class="detail-row"><span class="zhan">占</span>任务状态：<span>未完成</span></div>
+
+							</div>
+							<div class="column">
+								<div class="detail-row">
+									<span>任务说明：</span>
+									<span><textarea class="textarea"placeholder="请不少于10个字"></textarea></span>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</section>
+				<footer class="modal-card-foot">
+					<div class="btn-selfarea btn-selfarea0">
+						<a class="button is-outlined gg-button modal-button" data-target="#">确定</a>
+						<a class="button delete-modal gg-button modal-button" data-target="#">取消</a>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<!--详情-->
+		<div class="modal" id="fygjrwxq1">
+			<div class="modal-background"></div>
+			<div class="modal-card">
+				<header class="modal-card-head">
+					<p class="modal-card-title">跟进任务详情</p>
+				</header>
+				<section class="modal-card-body">
+					<div class="tabs-content" id="tabs-content" style="height:476px;">
+						<div class="columns ">
+							<div class="column">
+								<div class="detail-row"><span class="zhan">占</span>房源编号：<span>545548</span></div>
+								<div class="detail-row"><span class="zhan">占</span>房源地址：<span>轩辕客户</span></div>
+								<div class="detail-row"><span class="zhan">占</span>交易方式：<span>求租</span></div>
+								<div class="detail-row">任务分配人：<span>银贤测试/轩辕</span></div>
+								<div class="detail-row"><span class="zhan">占</span>分配日期：<span>2016-11-08 16:25</span></div>
+								<div class="detail-row">任务执行人：<span>银贤测试/轩辕</span></div>
+								<div class="detail-row"><span class="zhan">占</span>截至日期：<span>2016-11-09</span></div>
+								<div class="detail-row"><span class="zhan">占</span>任务状态：<span>未完成</span></div>
+
+							</div>
+							<div class="column">
+								<div class="detail-row">
+									<span>任务说明：</span>
+									<span><div class="textarea">dsfsdfasdfa</div></span>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</section>
+				<footer class="modal-card-foot">
+					<div class="btn-selfarea btn-selfarea0">
+						<a class="button is-outlined gg-button modal-button" data-target="#">查看跟进</a>
+						<a class="button delete-modal gg-button modal-button" data-target="#">确定</a>
+					</div>
+				</footer>
+			</div>
+		</div>
+
+		<!--跟进-->
+		<!--跟进-->
+		<div class="modal" id="fygjxq">
+			<div class="modal-background"></div>
+			<div class="modal-card">
+				<header class="modal-card-head">
+					<p class="modal-card-title">点评跟进</p>
+				</header>
+				<section class="modal-card-body">
+					<div class="tabs-content" id="tabs-content" style="height:476px;">
+						<div class="columns ">
+							<div class="column">
+								<div class="detail-row">房源编号：<span>545548</span></div>
+								<div class="detail-row">房源地址：<span>轩辕客户</span></div>
+								<div class="detail-row">房源归属：<span>全部</span></div>
+								<div class="detail-row">交易方式：<span>求购</span></div>
+								<div class="detail-row">跟进方式：<span>去电</span></div>
+								<div class="detail-row">跟进员工：<span>银贤测试/轩辕</span></div>
+								<div class="detail-row">跟进日期：<span>2016-11-09</span></div>
+								<div class="detail-row">跟进内容：<span>
+									<textarea class="textarea"placeholder="请不少于6个字"></textarea>
+								</span></div>
+								<div class="detail-row">跟进状态：
+									<span>
+									<label><input type="radio"name="gjzt"value="0" class="radio"checked/>有效跟进 </label>
+									<label><input type="radio"name="gjzt"value="1" class="radio"/>无效跟进 </label>
+									</span></div>
+							</div>
+							<div class="column">
+								<div class="detail-row">
+									<span>点评内容：</span>
+									<span>
+										<div class="textarea">
+											<p><span>2012/11/02</span> <span>金刚石</span> <span>研究院三法索</span> </p>
+									<p><span>2012/11/02</span> <span>金刚石</span> <span>研究院三法索</span> </p>
+									<p><span>2012/11/02</span> <span>金刚石</span> <span>研究院三法索</span> </p>
+									<p><span>2012/11/02</span> <span>金刚石</span> <span>研究院三法索</span> </p>
+								</div>
+								</span>
+							</div>
+							<div class="detail-row">
+								<span>追加点评：</span>
+								<span>
+										<textarea class="textarea"style="min-height:40px ;"></textarea>
+									</span>
+							</div>
+						</div>
+					</div>
+
+			</div>
+
+			</section>
+			<footer class="modal-card-foot">
+				<div class="btn-selfarea btn-selfarea0">
+					<a class="button is-outlined gg-button modal-button" data-target="#">确定</a>
+					<a class="button delete-modal gg-button modal-button" data-target="#">取消</a>
+				</div>
+			</footer>
+		</div>
+		</div>
+		<!--修改-->
+		<div class="modal" id="fygjxq1">
+			<div class="modal-background"></div>
+			<div class="modal-card">
+				<header class="modal-card-head">
+					<p class="modal-card-title">修改跟进</p>
+				</header>
+				<section class="modal-card-body">
+					<div class="tabs-content" id="tabs-content" style="height:476px;">
+						<div class="columns ">
+							<div class="column">
+								<div class="detail-row">房源编号：<span>545548</span></div>
+								<div class="detail-row">房源地址：<span>轩辕客户</span></div>
+								<div class="detail-row">房源归属：<span>全部</span></div>
+								<div class="detail-row">交易方式：<span>出售</span></div>
+								<div class="detail-row">跟进方式：<span>去电</span></div>
+								<div class="detail-row">跟进员工：<span>银贤测试/轩辕</span></div>
+								<div class="detail-row">跟进日期：<span>2016-11-09</span></div>
+								<div class="detail-row">跟进内容：<span>
+									<textarea class="textarea"placeholder="请不少于6个字"></textarea>
+								</span></div>
+								<div class="detail-row">跟进状态：
+									<span>
+									<label><input type="radio"name="gjzt"value="0" class="radio"checked/>有效跟进 </label>
+									<label><input type="radio"name="gjzt"value="1" class="radio"/>无效跟进 </label>
+									</span></div>
+							</div>
+							<div class="column">
+								<div class="detail-row">
+									<span>点评内容：</span>
+									<span>
+										<div class="textarea">
+											<p><span>2012/11/02</span> <span>金刚石</span> <span>研究院三法索</span> </p>
+									<p><span>2012/11/02</span> <span>金刚石</span> <span>研究院三法索</span> </p>
+									<p><span>2012/11/02</span> <span>金刚石</span> <span>研究院三法索</span> </p>
+									<p><span>2012/11/02</span> <span>金刚石</span> <span>研究院三法索</span> </p>
+								</div>
+								</span>
+							</div>
+						</div>
+					</div>
+
+			</div>
+
+			</section>
+			<footer class="modal-card-foot">
+				<div class="btn-selfarea btn-selfarea0">
+					<a class="button is-outlined gg-button modal-button" data-target="#">确定</a>
+					<a class="button delete-modal gg-button modal-button" data-target="#">取消</a>
+				</div>
+			</footer>
+		</div>
+		</div>
+		<!--详情-->
+		<div class="modal" id="fygjxq2">
+			<div class="modal-background"></div>
+			<div class="modal-card">
+				<header class="modal-card-head">
+					<p class="modal-card-title">跟进详情</p>
+				</header>
+				<section class="modal-card-body">
+					<div class="tabs-content" id="tabs-content" style="height:476px;">
+						<div class="columns ">
+							<div class="column">
+								<div class="detail-row">房源编号：<span>545548</span></div>
+								<div class="detail-row">房源地址：<span>轩辕客户</span></div>
+								<div class="detail-row">房源归属：<span>全部</span></div>
+								<div class="detail-row">交易方式：<span>求购</span></div>
+								<div class="detail-row">跟进方式：<span>去电</span></div>
+								<div class="detail-row">跟进员工：<span>银贤测试/轩辕</span></div>
+								<div class="detail-row">跟进日期：<span>2016-11-09</span></div>
+								<div class="detail-row">跟进内容：<span>
+									<div class="textarea">j2125424</div>
+								</span></div>
+								<div class="detail-row">跟进状态：
+									<span>
+									有效跟进
+									</span></div>
+							</div>
+							<div class="column">
+								<div class="detail-row">
+									<span>点评内容：</span>
+									<span>
+										<div class="textarea">
+											<p><span>2012/11/02</span> <span>金刚石</span> <span>研究院三法索</span> </p>
+									<p><span>2012/11/02</span> <span>金刚石</span> <span>研究院三法索</span> </p>
+									<p><span>2012/11/02</span> <span>金刚石</span> <span>研究院三法索</span> </p>
+									<p><span>2012/11/02</span> <span>金刚石</span> <span>研究院三法索</span> </p>
+								</div>
+								</span>
+							</div>
+						</div>
+					</div>
+
+			</div>
+
+			</section>
+			<footer class="modal-card-foot">
+				<div class="btn-selfarea btn-selfarea0">
+					<a class="button is-outlined gg-button modal-button" data-target="#">确定</a>
+				</div>
+			</footer>
+		</div>
+		</div>
+
+		<!--带看-->
+		<!--修改-->
+		<div class="modal" id="fydkxq">
+			<div class="modal-background"></div>
+			<div class="modal-card">
+				<header class="modal-card-head">
+					<p class="modal-card-title">修改带看</p>
+				</header>
+				<section class="modal-card-body">
+					<div class="tabs-content" id="tabs-content" style="height:476px;">
+						<div class="columns ">
+							<div class="column">
+								<div class="detail-row">房源编号：<span>545548</span></div>
+								<div class="detail-row">房源地址：<span>轩辕客户</span></div>
+								<div class="detail-row">房源归属：<span>银贤测试/全部</span></div>
+								<div class="detail-row">跟进方式：<span>去电</span></div>
+								<div class="detail-row">带看员工：<span>银贤测试/轩辕</span></div>
+								<div class="detail-row">跟进内容：<span>
+									<textarea class="textarea"placeholder="请不少于6个字"></textarea>
+								</span></div>
+								<div class="detail-row">带看员工：<span class="select">
+									<select>
+										<option>不感兴趣</option>
+										<option>略有兴趣</option>
+										<option selected>有兴趣</option>
+										<option>非常喜欢</option>
+										<option>考虑中</option>
+										<option>不考虑</option>
+										<option>没有看</option>
+									</select>
+								</span></div>
+								<div class="detail-row">跟进状态：
+									<span>
+									<label><input type="radio"name="gjzt"value="0" class="radio"checked/>有效跟进 </label>
+									<label><input type="radio"name="gjzt"value="1" class="radio"/>无效跟进 </label>
+									</span></div>
+							</div>
+							<div class="column">
+								<div class="detail-row">客源编号：<span>545548</span></div>
+								<div class="detail-row"><span class="zhan">占占</span>客户：<span>轩辕客户</span></div>
+								<div class="detail-row">客源归属：<span>银贤测试/全部</span></div>
+								<div class="detail-row">交易方式：<span>去电</span></div>
+								<div class="detail-row">带看日期：<span>2016-11-01 16:30</span></div>
+								<div class="detail-row">点评内容：<span>
+									<div class="textarea">
+										<p>215454545</p>
+									</div>
+								</span></div>
+							</div>
+						</div>
+
+					</div>
+
+				</section>
+				<footer class="modal-card-foot">
+					<div class="btn-selfarea btn-selfarea0">
+						<a class="button is-outlined gg-button modal-button" data-target="#">确定</a>
+						<a class="button delete-modal gg-button modal-button" data-target="#">取消</a>
+					</div>
+				</footer>
+			</div>
+		</div>
+
+		<!--详情-->
+		<div class="modal" id="fydkxq1">
+			<div class="modal-background"></div>
+			<div class="modal-card">
+				<header class="modal-card-head">
+					<p class="modal-card-title">跟进详情</p>
+				</header>
+				<section class="modal-card-body">
+					<div class="tabs-content" id="tabs-content" style="height:476px;">
+						<div class="columns ">
+							<div class="column">
+								<div class="detail-row">房源编号：<span>545548</span></div>
+								<div class="detail-row">房源地址：<span>轩辕客户</span></div>
+								<div class="detail-row">房源归属：<span>银贤测试/全部</span></div>
+								<div class="detail-row">跟进方式：<span>去电</span></div>
+								<div class="detail-row">带看员工：<span>银贤测试/轩辕</span></div>
+								<div class="detail-row">跟进内容：<span>
+									<div class="textarea">sadda</div>
+								</span></div>
+								<div class="detail-row">带看员工：<span class="">
+									不考虑
+								</span></div>
+								<div class="detail-row">跟进状态：
+									<span>
+									有效跟进 
+									</span></div>
+							</div>
+							<div class="column">
+								<div class="detail-row">客源编号：<span>545548</span></div>
+								<div class="detail-row"><span class="zhan">占占</span>客户：<span>轩辕客户</span></div>
+								<div class="detail-row">客源归属：<span>银贤测试/全部</span></div>
+								<div class="detail-row">交易方式：<span>去电</span></div>
+								<div class="detail-row">带看日期：<span>2016-11-01 16:30</span></div>
+								<div class="detail-row">点评内容：<span>
+									<div class="textarea">
+										<p>215454545</p>
+									</div>
+								</span></div>
+							</div>
+						</div>
+
+					</div>
+
+				</section>
+				<footer class="modal-card-foot">
+					<div class="btn-selfarea btn-selfarea0">
+						<a class="button is-outlined gg-button modal-button" data-target="#">确定</a>
+					</div>
+				</footer>
+			</div>
+		</div>
+
+		<!--点评-->
+		<div class="modal" id="fydkxq2">
+			<div class="modal-background"></div>
+			<div class="modal-card">
+				<header class="modal-card-head">
+					<p class="modal-card-title">点评带看</p>
+				</header>
+				<section class="modal-card-body">
+					<div class="tabs-content" id="tabs-content" style="height:476px;">
+						<div class="columns ">
+							<div class="column">
+								<div class="detail-row">房源编号：<span>545548</span></div>
+								<div class="detail-row">房源地址：<span>轩辕客户</span></div>
+								<div class="detail-row">房源归属：<span>银贤测试/全部</span></div>
+								<div class="detail-row">跟进方式：<span>去电</span></div>
+								<div class="detail-row">带看员工：<span>银贤测试/轩辕</span></div>
+								<div class="detail-row">跟进内容：<span>
+									<textarea class="textarea"placeholder="请不少于6个字"></textarea>
+								</span></div>
+								<div class="detail-row">带看员工：<span class="select">
+									<select>
+										<option>不感兴趣</option>
+										<option>略有兴趣</option>
+										<option selected>有兴趣</option>
+										<option>非常喜欢</option>
+										<option>考虑中</option>
+										<option>不考虑</option>
+										<option>没有看</option>
+									</select>
+								</span></div>
+								<div class="detail-row">跟进状态：
+									<span>
+									<label><input type="radio"name="gjzt"value="0" class="radio"checked/>有效跟进 </label>
+									<label><input type="radio"name="gjzt"value="1" class="radio"/>无效跟进 </label>
+									</span></div>
+							</div>
+							<div class="column">
+								<div class="detail-row">客源编号：<span>545548</span></div>
+								<div class="detail-row"><span class="zhan">占占</span>客户：<span>轩辕客户</span></div>
+								<div class="detail-row">客源归属：<span>银贤测试/全部</span></div>
+								<div class="detail-row">交易方式：<span>去电</span></div>
+								<div class="detail-row">带看日期：<span>2016-11-01 16:30</span></div>
+								<div class="detail-row">点评内容：<span>
+									<div class="textarea">
+										<p>215454545</p>
+									</div>
+								</span></div>
+								<div class="detail-row">追加点评：<span>
+									<textarea class="textarea" style="min-height: 40px;"></textarea>
+								</span></div>
+							</div>
+						</div>
+
+					</div>
+
+				</section>
+				<footer class="modal-card-foot">
+					<div class="btn-selfarea btn-selfarea0">
+						<a class="button is-outlined gg-button modal-button" data-target="#">确定</a>
+						<a class="button delete-modal gg-button modal-button" data-target="#">取消</a>
+					</div>
+				</footer>
+			</div>
+		</div>
+
+		<script src="js/jquery-2.2.0.min.js"></script>
+		<script src="js/bulma.js"></script>
+		<script src="js/clipboard.min.js"></script>
+		<script>
+			$("#btn-con").hide()
+			$("#btn").click(function() {
+				if($(this).is(":checked")) {
+					$(this).attr("checked", "true")
+					$("#btn-con").show()
+				} else {
+					$(this).removeAttr("checked")
+					$("#btn-con").hide()
+				}
+			})
+		</script>
+	</body>
+
+</html>
